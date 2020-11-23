@@ -4,6 +4,7 @@ interface
 
 uses DUnitX.TestFramework, Classes, System.SysUtils,
   Trekktabeller.Konstanter, Trekktabeller.Trekktabeller2019.Konstanter,
+  Trekktabeller.Trekktabeller2019.Tabellnummer,
   Trekktabeller.Skatteberegning, Trekktabeller.Trekktabeller2018.Periode,
   Trekktabeller.Fradrag, Trekktabeller.Tabellnummer, Trekktabeller.Periode,
   Trekktabeller.Trekkrutine, Trekktabeller.Utils, uSkattFactory,

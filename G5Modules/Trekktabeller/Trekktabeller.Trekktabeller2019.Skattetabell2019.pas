@@ -3,6 +3,7 @@ unit Trekktabeller.Trekktabeller2019.Skattetabell2019;
 interface
 
 uses Trekktabeller.Tabellnummer, Trekktabeller.Trekktabeller2019.Konstanter,
+  Trekktabeller.Trekktabeller2019.Tabellnummer,
   Trekktabeller.Periode, Trekktabeller.Trekktabeller2018.Periode,
   Trekktabeller.Skatteberegning, Trekktabeller.Trekkrutine,
   Trekktabeller.Fradrag, Trekktabeller.Konstanter, Trekktabeller.Nettolonn;

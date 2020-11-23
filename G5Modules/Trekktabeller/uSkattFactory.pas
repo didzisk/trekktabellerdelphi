@@ -13,7 +13,7 @@ implementation
 uses Trekktabeller.Konstanter,
   Trekktabeller.Trekktabeller2020.Konstanter, Trekktabeller.Trekktabeller2019.Konstanter,
   Trekktabeller.Trekktabeller2020.Skattetabell2020, Trekktabeller.Trekktabeller2019.Skattetabell2019,
-  Trekktabeller.Tabellnummer;
+  Trekktabeller.Tabellnummer, Trekktabeller.Trekktabeller2019.Tabellnummer;
 
 function BeregnForskuddstrekk(const Trekkgrunnlag, Tabellnummer:integer; Pensjonist:boolean; Tabtrekkperiode, AntUker : integer; Year:integer):integer;
 var

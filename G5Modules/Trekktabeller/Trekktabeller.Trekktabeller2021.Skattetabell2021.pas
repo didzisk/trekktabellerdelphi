@@ -1,8 +1,8 @@
-unit Trekktabeller.Trekktabeller2018.Skattetabell2018;
+unit Trekktabeller.Trekktabeller2021.Skattetabell2021;
 
 interface
 
-uses Trekktabeller.Tabellnummer, Trekktabeller.Trekktabeller2018.Konstanter,
+uses Trekktabeller.Tabellnummer, Trekktabeller.Trekktabeller2021.Konstanter,
   Trekktabeller.Periode, Trekktabeller.Trekktabeller2018.Periode,
   Trekktabeller.Skatteberegning, Trekktabeller.Trekkrutine,
   Trekktabeller.Fradrag, Trekktabeller.Konstanter, Trekktabeller.Nettolonn;
@@ -20,11 +20,11 @@ var
   Skatt:TSkatteberegning;
   Frad:TFradrag;
 begin
-  Konst:=InitializeKonstanter2018;
+  Konst:=InitializeKonstanter2021;
   Skatt:=TSkatteberegning.Create(Konst);
   Frad:=TFradrag.Create(Konst);
   try
-    Tab:=InitializeTabellnummerData(TabellNr, Pensjonist, Konst);
+    Tab:=InitializeTabellnummerData2021(TabellNr, Pensjonist, Konst);
     Perx:=initializePeriodeData(Periode(Tabtrekkperiode), Tab);
     result:=beregnTabelltrekk(Tab, Perx, Trekkgrunnlag, Skatt, Frad);
   finally
@@ -42,11 +42,11 @@ var
   Skatt:TSkatteberegning;
   Frad:TFradrag;
 begin
-  Konst:=InitializeKonstanter2018;
+  Konst:=InitializeKonstanter2021;
   Skatt:=TSkatteberegning.Create(Konst);
   Frad:=TFradrag.Create(Konst);
   try
-    Tab:=InitializeTabellnummerData(TabellNr, Pensjonist, Konst);
+    Tab:=InitializeTabellnummerData2021(TabellNr, Pensjonist, Konst);
     Perx:=initializePeriodeData(Periode(Tabtrekkperiode), Tab);
     result:=beregnNettoTabelltrekk(Tab, Perx, Trekkgrunnlag, Skatt, Frad);
   finally

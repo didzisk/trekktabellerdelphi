@@ -2,7 +2,7 @@ unit Trekktabeller.Utils;
 
 interface
 
-uses System.Math, DecimalRounding_JH1;
+uses DecimalRounding_JH1;
 
 function RoundAwayFromZero(x:Double):integer;
 
