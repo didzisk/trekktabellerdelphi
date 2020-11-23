@@ -11,12 +11,9 @@ uses
   DUnitX.Loggers.Console,
   DUnitX.Loggers.Xml.NUnit,
   DUnitX.TestFramework,
-  ExampleTests in 'G5Tests\ExampleTests.pas',
   SkattetabellTests in 'G5Tests\SkattetabellTests.pas',
-  SkattetabellTests2019 in 'G5Tests\SkattetabellTests2019.pas',
   SkattetabellTests2020 in 'G5Tests\SkattetabellTests2020.pas',
   DecimalRounding_JH1 in 'G5Modules\Trekktabeller\DecimalRounding_JH1.pas',
-  Skatt in 'G5Modules\Trekktabeller\Skatt.pas',
   Trekktabeller.Fradrag in 'G5Modules\Trekktabeller\Trekktabeller.Fradrag.pas',
   Trekktabeller.Konstanter in 'G5Modules\Trekktabeller\Trekktabeller.Konstanter.pas',
   Trekktabeller.Nettolonn in 'G5Modules\Trekktabeller\Trekktabeller.Nettolonn.pas',
@@ -25,14 +22,16 @@ uses
   Trekktabeller.Tabellnummer in 'G5Modules\Trekktabeller\Trekktabeller.Tabellnummer.pas',
   Trekktabeller.Tabelltype in 'G5Modules\Trekktabeller\Trekktabeller.Tabelltype.pas',
   Trekktabeller.Trekkrutine in 'G5Modules\Trekktabeller\Trekktabeller.Trekkrutine.pas',
-  Trekktabeller.Trekktabeller2019.Konstanter in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2019.Konstanter.pas',
-  Trekktabeller.Trekktabeller2019.Skattetabell2019 in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2019.Skattetabell2019.pas',
   Trekktabeller.Trekktabeller2020.Konstanter in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Konstanter.pas',
   Trekktabeller.Trekktabeller2020.Skattetabell2020 in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Skattetabell2020.pas',
   Trekktabeller.Trekktabeller2021.Konstanter in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Konstanter.pas',
   Trekktabeller.Trekktabeller2021.Skattetabell2021 in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Skattetabell2021.pas',
   Trekktabeller.Utils in 'G5Modules\Trekktabeller\Trekktabeller.Utils.pas',
-  uSkattFactory in 'G5Modules\Trekktabeller\uSkattFactory.pas';
+  uSkattFactory in 'G5Modules\Trekktabeller\uSkattFactory.pas',
+  Trekktabeller.Trekktabeller2020.Tabellnummer in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Tabellnummer.pas',
+  Trekktabeller.Trekktabeller2021.Tabellnummer in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Tabellnummer.pas',
+  Trekktabeller.Trekktabeller2018.Periode in 'G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2018.Periode.pas',
+  SkattetabellTests2021 in 'G5Tests\SkattetabellTests2021.pas';
 
 var
   runner : ITestRunner;

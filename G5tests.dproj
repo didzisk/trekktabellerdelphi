@@ -179,12 +179,9 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="G5Tests\ExampleTests.pas"/>
         <DCCReference Include="G5Tests\SkattetabellTests.pas"/>
-        <DCCReference Include="G5Tests\SkattetabellTests2019.pas"/>
         <DCCReference Include="G5Tests\SkattetabellTests2020.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\DecimalRounding_JH1.pas"/>
-        <DCCReference Include="G5Modules\Trekktabeller\Skatt.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Fradrag.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Konstanter.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Nettolonn.pas"/>
@@ -193,14 +190,16 @@
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Tabellnummer.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Tabelltype.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekkrutine.pas"/>
-        <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2019.Konstanter.pas"/>
-        <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2019.Skattetabell2019.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Konstanter.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Skattetabell2020.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Konstanter.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Skattetabell2021.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Utils.pas"/>
         <DCCReference Include="G5Modules\Trekktabeller\uSkattFactory.pas"/>
+        <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2020.Tabellnummer.pas"/>
+        <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2021.Tabellnummer.pas"/>
+        <DCCReference Include="G5Modules\Trekktabeller\Trekktabeller.Trekktabeller2018.Periode.pas"/>
+        <DCCReference Include="G5Tests\SkattetabellTests2021.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

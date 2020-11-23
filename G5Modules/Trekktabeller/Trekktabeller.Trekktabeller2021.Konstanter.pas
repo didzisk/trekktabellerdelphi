@@ -4,45 +4,45 @@ interface
 
 uses Trekktabeller.Utils, Trekktabeller.Konstanter;
 
-function InitializeKonstanter2020: TKonstanter;
+function InitializeKonstanter2021: TKonstanter;
 
 implementation
 
-function InitializeKonstanter2020: TKonstanter;
+function InitializeKonstanter2021: TKonstanter;
 begin
   with result do
   begin
-    KLASSE1_VANLIG := 51300;
-    KLASSE1_FINNMARK := 66800; // Personfradrag + finnmarksfradrag
-    TRINN1 := 180800;
-    TRINN2 := 254500;
-    TRINN3 := 639750;
-    TRINN4 := 999550;
-    AVG_FRI_TRYGDEAVGIFT := 54650;
+    KLASSE1_VANLIG := 52450;
+    KLASSE1_FINNMARK := 67950; // Personfradrag + finnmarksfradrag
+    TRINN1 := 184800;
+    TRINN2 := 260100;
+    TRINN3 := 651250;
+    TRINN4 := 1021550;
+    AVG_FRI_TRYGDEAVGIFT := 59650;
     MAX_STFRADRAG := 40000;
     MIN_ANV_MINSTE_FRADRAG := 3520;
-    MAX_ANV_MINSTE_FRADRAG := 91916; // Lønn
-    MAX_ANV_MINSTE_FRADRAG_PENSJ := 76956;
+    MAX_ANV_MINSTE_FRADRAG := 93940; // Lønn
+    MAX_ANV_MINSTE_FRADRAG_PENSJ := 78056;
     MIN_MINSTE_FRADRAG := 4000;
-    MAX_MINSTE_FRADRAG := 104450;
+    MAX_MINSTE_FRADRAG := 106750;
     LONNSFRADRAG := 31800;
     ANV_LONNSFRADRAG := 27984;
     MAX_SJO_FRADRAG := 80000;
 
-    PROSENT_TRINN1 := 1.9;
-    PROSENT_TRINN2 := 4.2;
+    PROSENT_TRINN1 := 1.7;
+    PROSENT_TRINN2 := 4.0;
     PROSENT_TRINN3 := 13.2;
     PROSENT_TRINN3_FINNMARK := 11.2;
     PROSENT_TRINN4 := 16.2;
-    FELLES_SKATT_VANLIG := 8.45;
-    FELLES_SKATT_FINNMARK := 4.95;
-    SKATTORE := 13.55;
+    FELLES_SKATT_VANLIG := 7.15;
+    FELLES_SKATT_FINNMARK := 3.65;
+    SKATTORE := 14.85;
     TRYGDE_PROSENT := 25;
     LAV_TRYGDEAVG_PROSENT := 5.1;
     HOY_TRYGDEAVG_PROSENT := 8.2;
-    ANV_MINSTE_FRAD_PROSENT := 39.6;
-    ANV_MINSTE_FRAD_PROSENT_PENSJ := 27.28;
-    MINSTE_FRAD_PROSENT := 45.0;
+    ANV_MINSTE_FRAD_PROSENT := 40.48;
+    ANV_MINSTE_FRAD_PROSENT_PENSJ := 28.16;
+    MINSTE_FRAD_PROSENT := 46.0;
     STFRADRAG_PROSENT := 10;
     SJO_PROSENT := 30;
 

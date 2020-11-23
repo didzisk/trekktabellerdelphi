@@ -4,6 +4,7 @@ interface
 
 uses DUnitX.TestFramework, Classes, System.SysUtils,
   Trekktabeller.Konstanter, Trekktabeller.Trekktabeller2020.Konstanter,
+  Trekktabeller.Trekktabeller2020.Tabellnummer,
   Trekktabeller.Skatteberegning, Trekktabeller.Trekktabeller2018.Periode,
   Trekktabeller.Fradrag, Trekktabeller.Tabellnummer, Trekktabeller.Periode,
   Trekktabeller.Trekkrutine, Trekktabeller.Utils, uSkattFactory,
@@ -76,11 +77,11 @@ uses DUnitX.TestFramework, Classes, System.SysUtils,
     procedure Calc2020Trygdeavgift(const personInntektAar, Tabellnummer, Expected:integer);
 
     [Test]
-    [TestCase('', '..\..\..\SkattetabellerFsharp\HL.Payroll.Tests\Skattetabell\trekk2020.txt, 2020')]
+    [TestCase('', '..\..\G5Tests\trekk2020.txt, 2020')]
     procedure TestWholeTable(const InputFile:String; Year:integer); override;
 
     [Test]
-    [TestCase('', '..\..\..\SkattetabellerFsharp\HL.Payroll.Tests\Skattetabell\trekk2020.txt, 2020')]
+    [TestCase('', '..\..\G5Tests\trekk2020.txt, 2020')]
     procedure TestNettoTable(const InputFile:String; Year:integer);
 
     [Test]
