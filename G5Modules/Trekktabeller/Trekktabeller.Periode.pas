@@ -29,6 +29,7 @@ function cpr //cpr means ConstructPeriodeRec
 
 implementation
 
+//cpr means construct period record
 function cpr
     (aTabell:TTabellnummer;
       inntektsPeriode, trekkPeriode,

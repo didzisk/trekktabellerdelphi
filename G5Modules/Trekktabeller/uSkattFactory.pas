@@ -2,7 +2,7 @@ unit uSkattFactory;
 
 interface
 
-uses Skatt, Trekktabeller.Periode;
+uses Trekktabeller.Periode;
 
 function BeregnForskuddstrekk(const Trekkgrunnlag, Tabellnummer:integer; Pensjonist:boolean; Tabtrekkperiode, AntUker : integer; Year:integer):integer;
 function BeregnNettoskatt(const Trekkgrunnlag, Tabellnummer:integer; Pensjonist:boolean; Tabtrekkperiode, AntUker : integer; Year:integer):integer;
@@ -11,9 +11,13 @@ function IsTolvMndSkatt(const Tabellnummer:integer; Year:integer):boolean;
 implementation
 
 uses Trekktabeller.Konstanter,
-  Trekktabeller.Trekktabeller2020.Konstanter, Trekktabeller.Trekktabeller2019.Konstanter,
-  Trekktabeller.Trekktabeller2020.Skattetabell2020, Trekktabeller.Trekktabeller2019.Skattetabell2019,
-  Trekktabeller.Tabellnummer;
+  Trekktabeller.Trekktabeller2020.Konstanter,
+  Trekktabeller.Trekktabeller2020.Skattetabell2020,
+  Trekktabeller.Tabellnummer,
+  Trekktabeller.Trekktabeller2020.Tabellnummer,
+  Trekktabeller.Trekktabeller2021.Konstanter,
+  Trekktabeller.Trekktabeller2021.Tabellnummer,
+  Trekktabeller.Trekktabeller2021.Skattetabell2021;
 
 function BeregnForskuddstrekk(const Trekkgrunnlag, Tabellnummer:integer; Pensjonist:boolean; Tabtrekkperiode, AntUker : integer; Year:integer):integer;
 var
@@ -32,11 +36,11 @@ begin
       Factor:=AntUker;
   end;
   AdjustedTrekkGrl:=Trekkgrunnlag div Factor;
-  if Year = 2020 then
-    result:=Factor * Trekktabeller.Trekktabeller2020.Skattetabell2020
+  if Year = 2021 then
+    result:=Factor * Trekktabeller.Trekktabeller2021.Skattetabell2021
       .BeregnForskuddstrekk(AdjustedTrekkGrl, Tabellnummer, Pensjonist, AdjustedTrekkPer)
   else
-    result:=Factor * Trekktabeller.Trekktabeller2019.Skattetabell2019
+    result:=Factor * Trekktabeller.Trekktabeller2020.Skattetabell2020
       .BeregnForskuddstrekk(AdjustedTrekkGrl, Tabellnummer, Pensjonist, AdjustedTrekkPer);
 end;
 
@@ -58,22 +62,22 @@ begin
   end;
   AdjustedTrekkGrl:=Trekkgrunnlag div Factor;
 
-  if Year = 2020 then
-    Result := Factor * Trekktabeller.Trekktabeller2020.Skattetabell2020.
+  if Year = 2021 then
+    Result := Factor * Trekktabeller.Trekktabeller2021.Skattetabell2021.
       BeregnNettoskatt(AdjustedTrekkGrl, Tabellnummer, Pensjonist,
       AdjustedTrekkPer)
   else
-    Result := Factor * Trekktabeller.Trekktabeller2019.Skattetabell2019.
+    Result := Factor * Trekktabeller.Trekktabeller2020.Skattetabell2020.
       BeregnNettoskatt(AdjustedTrekkGrl, Tabellnummer, Pensjonist,
       AdjustedTrekkPer);
 end;
 
 function IsTolvMndSkatt(const Tabellnummer: integer; Year: integer): boolean;
 begin
-  if Year = 2020 then
-    Result := InitializeTabellnummerData2020(Tabellnummer, False, InitializeKonstanter2020).trekk_i_12_mnd
+  if Year = 2021 then
+    Result := InitializeTabellnummerData2021(Tabellnummer, False, InitializeKonstanter2021).trekk_i_12_mnd
   else
-    Result := InitializeTabellnummerData2019(Tabellnummer, False, InitializeKonstanter2019).trekk_i_12_mnd;
+    Result := InitializeTabellnummerData2020(Tabellnummer, False, InitializeKonstanter2020).trekk_i_12_mnd;
 end;
 
 end.
